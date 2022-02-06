@@ -1,3 +1,12 @@
+```
+php artisan make:component Message
+```
+
+You may also create components within subdirectories:
+```
+php artisan make:component Forms/Input
+```
+
 # how to use component
 
 
