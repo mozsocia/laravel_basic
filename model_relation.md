@@ -2,7 +2,7 @@
 https://github.com/piotr-jura-udemy/laravel-cheat-sheet/blob/master/docs/0036-one-to-one.md
 
 #### model Author.php
-```
+```php
 class Author extends Model
 {
     use HasFactory;
@@ -26,7 +26,7 @@ class Author extends Model
 ```
 
 #### model Profile.php
-```
+```php
 class Profile extends Model
 {
     use HasFactory;
@@ -52,7 +52,7 @@ Schema::create(
 
 1.This is one way of creating relation model
        
-```
+```php
   $auth2 = new Author();
   $auth2->name = $faker->name();
   $auth2->age = $faker->randomDigit();
@@ -66,7 +66,7 @@ Schema::create(
  
  2.This is Another way of creating relation model
  
- ```
+ ```php
   $auth2 = new Author();
   $auth2->name = $faker->name();
   $auth2->age = $faker->numberBetween($min=15, $max= 50);
