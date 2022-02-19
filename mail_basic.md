@@ -56,7 +56,7 @@ class NewsletterController extends Controller
     public function send_mail()
     {
 
-        Mail::to('exampmy@moztech.com')->from('moz@gmail.com')->send(new UserSubscribedMessage());
+        Mail::to('exampmy@moztech.com')->send(new UserSubscribedMessage());
         echo "done";
     }
     
