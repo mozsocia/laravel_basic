@@ -2,8 +2,7 @@ https://laravel.com/docs/9.x/mail#using-the-from-method
 
 #### App\Mail\UserSubscribedMessage.php
 
-```
-<?php
+```php
 
 namespace App\Mail;
 
@@ -28,7 +27,7 @@ class UserSubscribedMessage extends Mailable
 ```
 
 ####  resources\views\mail\subscribed.blade.php
-```
+```html
 <h1>User has Subscribed</h1>
 
 ```
@@ -36,14 +35,14 @@ class UserSubscribedMessage extends Mailable
 ---------------------------------------------------------------------------------
 
 #### web.php
-```
+```php
 <?php
 
 Route::get('/send', [NewsletterController::class, 'send_mail']);
 ```
 #### NewsletterController.php
 
-```
+```php
 namespace App\Http\Controllers;
 
 use App\Mail\UserSubscribedMessage;
