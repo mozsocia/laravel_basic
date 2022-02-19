@@ -1,14 +1,14 @@
 ## passing data to View
 
 
-```
+```php
 Route::get('/', function () {
     return view('greeting', ['name' => 'James']);
 });
+```
 
-
-<!-- View stored in resources/views/greeting.blade.php -->
-
+View stored in resources/views/greeting.blade.php
+```blade
 <html>
     <body>
         <h1>Hello, {{ $name }}</h1>
@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 
 
-```
+```php
 
 Route::get('peace', function () {
     $mydata = [
@@ -33,9 +33,9 @@ Route::get('peace', function () {
     return view('peace', ['data' => $mydata]);
 });
 
-
-<!-- View stored in resources/views/peace.blade.php -->
-
+```
+View stored in resources/views/peace.blade.php 
+```blade
 <html>
     <body>
       
@@ -52,7 +52,7 @@ Route::get('peace', function () {
 
 
 
-```
+```php
 
 Route::get('peace', function () {
    $mydata = [
@@ -62,10 +62,10 @@ Route::get('peace', function () {
 
     return view('peace', ['data' => $mydata]);
 });
+```
 
-
-<!-- View stored in resources/views/peace.blade.php -->
-
+View stored in resources/views/peace.blade.php 
+```blade
 <html>
     <body>
       
@@ -79,7 +79,7 @@ Route::get('peace', function () {
 
 
 
-```
+```php
 
 Route::get('peace', function () {
  $mydata = [
@@ -91,10 +91,11 @@ Route::get('peace', function () {
 
     return view('peace', ['data' => $mydata]);
 });
+```
+resources/views/peace.blade.php 
 
 
-<!-- View stored in resources/views/peace.blade.php -->
-
+```blade
 <html>
     <body>
       @foreach ($data as $item)
