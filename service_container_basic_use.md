@@ -1,8 +1,9 @@
 https://youtu.be/_z9nzEUgro4
 
+## This is use of service container without interface implementation
+
 #### PaymentGateway.php
-```
-<?php
+```php
 
 namespace App\Billing;
 
@@ -39,8 +40,7 @@ class PaymentGateway
 ```
 
 ##### OrderDetails.php
-```
-<?php
+```php
 
 namespace App\Orders;
 
@@ -70,14 +70,10 @@ class OrderDetails
 
 #### AppServiceProvider.php
 
-```
+```php
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
+    
     public function register()
     {
         $this->app->singleton(PaymentGateway::class, function ($app) {
@@ -89,14 +85,13 @@ class AppServiceProvider extends ServiceProvider
 
 
 #### web.php
-```
+```php
 Route::get('/pay', [PayOrderController::class, 'store']);
 ```
 
 #### PayOrderController.php
 
-```
-<?php
+```php
 namespace App\Http\Controllers;
 
 use App\Billing\PaymentGateway;
