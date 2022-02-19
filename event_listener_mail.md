@@ -1,6 +1,6 @@
 #### App\Mail\UserSubscribedMessage.php
 
-```
+```php
 namespace App\Mail;
 
 use ...
@@ -22,7 +22,7 @@ class UserSubscribedMessage extends Mailable
 ```
 
 #####  resources\views\mail\subscribed.blade.php
-```
+```html
 <h1>User has Subscribed</h1>
 
 ```
@@ -30,7 +30,7 @@ class UserSubscribedMessage extends Mailable
 ---------------------------------------------------------------------------------
 
 #### App\Events\UserSubcribed.php
-```
+```php
 namespace App\Events;
 use ....
 
@@ -54,7 +54,7 @@ class UserSubcribed
 
 ####   App\Listeners\EmailOwnerAboutSubscription.php
 
-```
+```php
 namespace App\Listeners;
 
 use App\Events\UserSubcribed,App\Mail\UserSubscribedMessage,Illuminate\Support\Facades\DB,Illuminate\Support\Facades\Mail;
@@ -81,7 +81,7 @@ class EmailOwnerAboutSubscription
 #### App\Providers\EventServiceProvider.php
 
 
-```
+```php
 namespace App\Providers;
 
 use ....
@@ -105,8 +105,7 @@ class EventServiceProvider extends ServiceProvider
  ```
 -----------------------------------
 #### NewsletterController.php
-```
-
+```php
 class NewsletterController extends Controller
 {
     public function index()
