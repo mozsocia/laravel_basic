@@ -26,8 +26,8 @@ View stored in resources/views/greeting.blade.php
 Route::get('peace', function () {
     $mydata = [
         'mozdalif',
-        'tansen',
-        'mia',
+        'homayra',
+       
     ];
 
     return view('peace', ['data' => $mydata]);
