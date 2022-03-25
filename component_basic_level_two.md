@@ -60,3 +60,41 @@ Route::get('/prac', function () {
 
 ![image](https://user-images.githubusercontent.com/12442613/160060178-87c3992b-ca19-476c-b230-23b5e1b25cc8.png)
 
+------------------------
+
+
+### If you want you can use this file 
+
+```
+php artisan make:component MessageTwo
+```
+
+\app\View\Components\MessageTwo.php
+```php
+
+namespace App\View\Components;
+
+use Illuminate\View\Component;
+
+class Message extends Component
+{
+    public $type;
+    public $message;
+    public $title;
+
+    public function __construct($type = null, $message = null, $title = null)
+    {
+        $this->type = $type;
+        $this->message = $message;
+        $this->title = $title;
+    }
+
+    public function render()
+    {
+        return view('components.message-two');
+    }
+}
+```
+
+
+
