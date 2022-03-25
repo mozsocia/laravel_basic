@@ -57,3 +57,6 @@ Route::get('/prac', function () {
 
 
 ## output........
+
+![image](https://user-images.githubusercontent.com/12442613/160060178-87c3992b-ca19-476c-b230-23b5e1b25cc8.png)
+
