@@ -1,3 +1,4 @@
+https://laravel.com/docs/9.x/blade#default-merged-attributes
 #### web.php
 
 ```php
