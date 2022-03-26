@@ -22,7 +22,7 @@ class UserSubscribedMessage extends Mailable
 ```
 
 #####  resources\views\mail\subscribed.blade.php
-```html
+```blade
 <h1>User has Subscribed</h1>
 
 ```
@@ -57,7 +57,7 @@ class UserSubcribed
 ```php
 namespace App\Listeners;
 
-use App\Events\UserSubcribed,App\Mail\UserSubscribedMessage,Illuminate\Support\Facades\DB,Illuminate\Support\Facades\Mail;
+use App\Events\UserSubcribed, App\Mail\UserSubscribedMessage, Illuminate\Support\Facades\DB, Illuminate\Support\Facades\Mail;
 
 class EmailOwnerAboutSubscription
 {
@@ -124,5 +124,5 @@ class NewsletterController extends Controller
        
         echo "done";
     }
-    ```
+```
 
