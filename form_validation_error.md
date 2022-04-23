@@ -20,11 +20,15 @@
     <input type="text" id="id_title" class="@error('title') is-invalid @enderror" placeholder="Title" name="title"
       value="{{ old('title') }}">
       @error('title')
-          <div class="alert alert-danger">{{ $message }}</div>
+          <div class="invalid-feedback">{{ $message }}</div>
       @enderror
 
     <input type="text" id="id_body" class="@error('title') is-invalid @enderror" placeholder="Body" name="body"
       value="{{ old('body') }}">
+      
+      @error('body')
+           <div class="invalid-feedback">{{ $message }}</div>
+      @enderror
 
     <button class="btn btn-purple btn-block" type="submit">Submit</button>
 
