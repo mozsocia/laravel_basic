@@ -77,6 +77,46 @@ Schema::create(
   $pro1->author()->associate($auth2)->save();
         
 ```
+-----------------------------
+https://stackoverflow.com/questions/41509900/how-to-create-eloquent-model-with-relationship
+
+
+```php
+
+class Person extends Model
+{
+    protected $fillable = ['firstname', 'lastname'];
+
+    public function employee()
+    {
+        return $this->hasOne('App\Employee');
+    }
+}
+
+
+class Employee extends Model
+{
+    protected $fillable = ['position'];
+
+    public function person()
+    {
+        return $this->belongsTo('App\Person');
+    }
+}
+```
+
+
+```php
+$person = Person::create($personData);
+$person->employee()->create($employeeData);
+```
+another way
+```php
+$person = Person::create(request()->all());
+$person->employee()->create(request()->all());
+```
+
+
         
         
 
