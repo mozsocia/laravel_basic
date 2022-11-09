@@ -51,6 +51,8 @@ class Customer extends Model
     {
         return $this->hasOne(Profile::class, 'customer_id', 'cid');
     }
+    
+    protected $primaryKey = 'cid';
 }
 
 ```
@@ -72,6 +74,8 @@ class Profile extends Model
     {
         return $this->belongsTo(Customer::class, 'customer_id', 'cid');
     }
+    
+    protected $primaryKey = 'pid';
 }
 
 ```
