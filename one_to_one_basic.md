@@ -76,25 +76,121 @@ class Profile extends Model
 
 ```
 
+------------------------
+-----------------------
+
 ```php
+Route::get('/customer', function () {
+    $customers = Customer::with('profile')->get();
+    return $customers;
+});
+
+Route::get('/profile', function () {
+    $customers = Profile::with('customer')->get();
+    return $customers;
+});
+
+```
+
+
+
+
+
+
+
+
+```json
+http://127.0.0.1:8000/customer
+[
+   {
+      "cid":1,
+      "name":"Jordy Leuschke",
+      "created_at":"2022-11-09T21:07:27.000000Z",
+      "updated_at":"2022-11-09T21:07:27.000000Z",
+      "profile":{
+         "pid":1,
+         "country":"Vanuatu",
+         "customer_id":1,
+         "created_at":"2022-11-09T21:07:28.000000Z",
+         "updated_at":"2022-11-09T21:07:28.000000Z"
+      }
+   },
+   {
+      "cid":2,
+      "name":"Alexandria Schinner",
+      "created_at":"2022-11-09T21:07:28.000000Z",
+      "updated_at":"2022-11-09T21:07:28.000000Z",
+      "profile":{
+         "pid":2,
+         "country":"Martinique",
+         "customer_id":2,
+         "created_at":"2022-11-09T21:07:28.000000Z",
+         "updated_at":"2022-11-09T21:07:28.000000Z"
+      }
+   },
+   {
+      "cid":3,
+      "name":"Mireille Upton",
+      "created_at":"2022-11-09T21:07:28.000000Z",
+      "updated_at":"2022-11-09T21:07:28.000000Z",
+      "profile":{
+         "pid":3,
+         "country":"Gambia",
+         "customer_id":3,
+         "created_at":"2022-11-09T21:07:28.000000Z",
+         "updated_at":"2022-11-09T21:07:28.000000Z"
+      }
+   }
+]
+```
+
+```json
+http://127.0.0.1:8000/profile
+[
+   {
+      "pid":1,
+      "country":"Vanuatu",
+      "customer_id":1,
+      "created_at":"2022-11-09T21:07:28.000000Z",
+      "updated_at":"2022-11-09T21:07:28.000000Z",
+      "customer":{
+         "cid":1,
+         "name":"Jordy Leuschke",
+         "created_at":"2022-11-09T21:07:27.000000Z",
+         "updated_at":"2022-11-09T21:07:27.000000Z"
+      }
+   },
+   {
+      "pid":2,
+      "country":"Martinique",
+      "customer_id":2,
+      "created_at":"2022-11-09T21:07:28.000000Z",
+      "updated_at":"2022-11-09T21:07:28.000000Z",
+      "customer":{
+         "cid":2,
+         "name":"Alexandria Schinner",
+         "created_at":"2022-11-09T21:07:28.000000Z",
+         "updated_at":"2022-11-09T21:07:28.000000Z"
+      }
+   },
+   {
+      "pid":3,
+      "country":"Gambia",
+      "customer_id":3,
+      "created_at":"2022-11-09T21:07:28.000000Z",
+      "updated_at":"2022-11-09T21:07:28.000000Z",
+      "customer":{
+         "cid":3,
+         "name":"Mireille Upton",
+         "created_at":"2022-11-09T21:07:28.000000Z",
+         "updated_at":"2022-11-09T21:07:28.000000Z"
+      }
+   }
+]
 ```
 
 ```php
 ```
 
-```php
-```
 
-```php
-```
-
-
-```php
-```
-
-```php
-```
-
-```php
-```
 
