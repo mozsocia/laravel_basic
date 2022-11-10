@@ -1,3 +1,6 @@
+https://www.youtube.com/watch?v=m0IsbkfONL4&list=PL1TrjkMQ8UbVyIT0cDX-54gN5tunWZvaI
+
+
 customers table <br>
 ![image](https://user-images.githubusercontent.com/12442613/200942223-b97307b0-fe2c-4548-a2c5-051b1935661e.png)
 
