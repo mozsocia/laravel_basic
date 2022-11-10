@@ -50,6 +50,9 @@ class Customer extends Model
     public function profile()
     {
         return $this->hasOne(Profile::class, 'customer_id', 'cid');
+        
+            // 'customer_id' --> profiles table a cusromer ar id (foreign key)
+            // 'cid' --> ai table ar primary key
     }
     
     protected $primaryKey = 'cid';
@@ -73,6 +76,9 @@ class Profile extends Model
     public function customer()
     {
         return $this->belongsTo(Customer::class, 'customer_id', 'cid');
+        
+            //'customer_id' -->  ai table a customer ar id (foreign key)
+            //'cid' --> customers table ar primary key
     }
     
     protected $primaryKey = 'pid';
