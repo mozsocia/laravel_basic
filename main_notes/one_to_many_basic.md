@@ -228,6 +228,51 @@ http://127.0.0.1:8000/customer
 
 ```json
 http://127.0.0.1:8000/profile
+[
+   {
+      "pid":1,
+      "country":"Holy See (Vatican City State)",
+      "customer_id":1,
+      "created_at":"2022-11-10T06:19:57.000000Z",
+      "updated_at":"2022-11-10T06:19:57.000000Z",
+      "customer":{
+         "cid":1,
+         "name":"Prof. Octavia Ferry",
+         "created_at":"2022-11-10T06:19:57.000000Z",
+         "updated_at":"2022-11-10T06:19:57.000000Z"
+      }
+   },
+   {
+      "pid":2,
+      "country":"Madagascar",
+      "customer_id":1,
+      "created_at":"2022-11-10T06:19:57.000000Z",
+      "updated_at":"2022-11-10T06:19:57.000000Z",
+      "customer":{
+         "cid":1,
+         "name":"Prof. Octavia Ferry",
+         "created_at":"2022-11-10T06:19:57.000000Z",
+         "updated_at":"2022-11-10T06:19:57.000000Z"
+      }
+   },
+   {
+      "pid":3,
+      "country":"Italy",
+      "customer_id":2,
+      "created_at":"2022-11-10T06:19:57.000000Z",
+      "updated_at":"2022-11-10T06:19:57.000000Z",
+      "customer":{
+         "cid":2,
+         "name":"Jordane Kihn",
+         "created_at":"2022-11-10T06:19:57.000000Z",
+         "updated_at":"2022-11-10T06:19:57.000000Z"
+      }
+   },
+   {
+      "pid":4,
+      "country":"Paraguay",
+      "customer_id":2,
+      "created_at":"2022-11-10T06:19:57.000000Z",
       "updated_at":"2022-11-10T06:19:57.000000Z",
       "customer":{
          "cid":2,
