@@ -2,7 +2,9 @@ https://www.youtube.com/watch?v=m0IsbkfONL4&list=PL1TrjkMQ8UbVyIT0cDX-54gN5tunWZ
 
 
 customers table <br>
-![image](https://user-images.githubusercontent.com/12442613/200942223-b97307b0-fe2c-4548-a2c5-051b1935661e.png)
+
+![image](https://user-images.githubusercontent.com/12442613/201019433-bc86a141-21cf-41c3-bd12-368631d3e61e.png)
+
 
 
 
@@ -18,7 +20,8 @@ customers table <br>
 <br><br>
 
 profiles table <br>
-![image](https://user-images.githubusercontent.com/12442613/200942320-3d0abbe0-6ba3-4754-a5e0-adfcf90aea74.png)
+![image](https://user-images.githubusercontent.com/12442613/201019491-536ebf1b-f43d-4fe3-b443-92321e7893fb.png)
+
 
 
 
