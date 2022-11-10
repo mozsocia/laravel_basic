@@ -193,6 +193,32 @@ http://127.0.0.1:8000/profile
 ]
 ```
 
+way of creating relationship
+```php
+
+Route::get('/create', function (Faker $faker) {
+
+    $cus = Customer::factory()->create();
+
+    $cus->profile()->create([
+        'country' => $faker->country,            // needs fillable
+    ]);                                  
+
+    $prof = new Profile();
+    $prof->country = $faker->country();
+
+    // one way
+    $cus->profile()->save($prof);
+
+    //another way
+    $prof->customer()->associate($cus)->save();
+
+    return $cus;
+});
+```
+
+```php
+```
 ```php
 ```
 
