@@ -195,7 +195,7 @@ http://127.0.0.1:8000/profile
 ---------------------------
 ---------------------------
 
-way of creating relationship
+way of creating relationship Data
 ```php
 
 Route::get('/create', function (Faker $faker) {
