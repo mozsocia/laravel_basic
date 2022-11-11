@@ -127,6 +127,8 @@ Route::get('/post-create', function () {
 ----------------------------------
 ----------------------------------
 ### without event and listener class
+
+use event and listener for broadcasting ... easy way is like below
 ```php
 <?php
 
