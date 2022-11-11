@@ -54,8 +54,8 @@ class Customer extends Model
     {
         return $this->hasOne(Profile::class, 'customer_id', 'cid');
         
-            // 'customer_id' --> profiles table a cusromer ar id (foreign key)
-            // 'cid' --> ai table ar primary key
+            // 'customer_id' -->foreign key on profiles table ( profiles table a cusromer ar id )
+            // 'cid' --> local key on customers table (ai table ar primary key)
     }
     
     protected $primaryKey = 'cid';
@@ -80,8 +80,8 @@ class Profile extends Model
     {
         return $this->belongsTo(Customer::class, 'customer_id', 'cid');
         
-            //'customer_id' -->  ai table a customer ar id (foreign key)
-            //'cid' --> customers table ar primary key
+            //'customer_id' -->  foreign key on profiles table  (ai table a customer ar id)
+            //'cid' --> local key on customers table (customers table ar primary key)
     }
     
     protected $primaryKey = 'pid';
