@@ -1,6 +1,6 @@
 https://www.youtube.com/watch?v=7GUaH6BI_V0
 
-
+### with event and listener class
 make this command 
 ```
 
@@ -124,6 +124,41 @@ Route::get('/post-create', function () {
 });
 
 ```
+----------------------------------
+----------------------------------
+### without event and listener class
+```php
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Post extends Model
+{
+    use HasFactory;
+
+    // protected $dispatchesEvents = [
+    //     'created' => PostCreated::class,
+    // ];
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::created(function ($post) {
+            dd('from boot method ', $post);
+        });
+
+    }
+}
+
+```
 
 ```php
-
+```
+```php
+```
+```php
+```
