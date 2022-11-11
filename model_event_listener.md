@@ -39,7 +39,7 @@ class Post extends Model
 
 ```
 
-link between model and listener in EventServiceProvider
+link between event and listener in EventServiceProvider
 ```php
 namespace App\Providers;
 class EventServiceProvider extends ServiceProvider
