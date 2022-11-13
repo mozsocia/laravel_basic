@@ -136,13 +136,13 @@ Route::get('/tags', function () {
 ```
 
 
-posts table
+posts table <br>
 ![image](https://user-images.githubusercontent.com/12442613/201504462-57f3e55b-58c6-4f2b-92bb-5d4321b8d0a4.png)
 
-tags table
+tags table <br>
 ![image](https://user-images.githubusercontent.com/12442613/201504446-46514a31-6bea-4ae9-aa78-89a34b79915d.png)
 
-post_tag table
+post_tag table <br>
 ![image](https://user-images.githubusercontent.com/12442613/201504514-9856cf77-bbdf-4fd5-ab0f-c2c87fc1e825.png)
 
 
