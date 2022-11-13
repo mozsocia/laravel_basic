@@ -1,0 +1,47 @@
+[
+    {
+        "type": "Directory",
+        "name": "f:\\laravel_project\\my_app_guard_polices\\routes",
+        "parent_id": null,
+        "fsPath": "f:\\laravel_project\\my_app_guard_polices\\routes",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "itd5Xrm7wfBCF6pc"
+    },
+    {
+        "type": "Directory",
+        "name": "f:\\laravel_project\\my_app_guard_polices\\app\\Http",
+        "parent_id": null,
+        "fsPath": "f:\\laravel_project\\my_app_guard_polices\\app\\Http",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "sr3qG8iH7ZRxyFK1"
+    },
+    {
+        "type": "Directory",
+        "name": "f:\\laravel_project\\my_app_guard_polices\\resources",
+        "parent_id": null,
+        "fsPath": "f:\\laravel_project\\my_app_guard_polices\\resources",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "TkQ1aLX0tjNIPqnw"
+    },
+    {
+        "type": "Directory",
+        "name": "f:\\laravel_project\\my_app_guard_polices\\app\\Models",
+        "parent_id": null,
+        "fsPath": "f:\\laravel_project\\my_app_guard_polices\\app\\Models",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "am9NKVl4Yfp8RkCw"
+    },
+    {
+        "type": "Directory",
+        "name": "f:\\laravel_project\\my_app_guard_polices\\app",
+        "parent_id": null,
+        "fsPath": "f:\\laravel_project\\my_app_guard_polices\\app",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "bJZhriyjnE3FqOav"
+    }
+]
