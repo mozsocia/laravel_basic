@@ -78,6 +78,8 @@ class PostObserver
 
 link observer in EventServiceProvider
 ```php
+class EventServiceProvider extends ServiceProvider
+{
 ...
 
     public function boot()
@@ -86,6 +88,7 @@ link observer in EventServiceProvider
         Post::observe(PostObserver::class);
     }
 ...
+}
 
 ```
 
