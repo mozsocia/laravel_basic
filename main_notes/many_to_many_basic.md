@@ -136,6 +136,148 @@ Route::get('/tags', function () {
 ```
 
 
+posts table <br>
+![image](https://user-images.githubusercontent.com/12442613/201504462-57f3e55b-58c6-4f2b-92bb-5d4321b8d0a4.png)
 
+tags table <br>
+![image](https://user-images.githubusercontent.com/12442613/201504446-46514a31-6bea-4ae9-aa78-89a34b79915d.png)
+
+post_tag table <br>
+![image](https://user-images.githubusercontent.com/12442613/201504514-9856cf77-bbdf-4fd5-ab0f-c2c87fc1e825.png)
+
+
+```json
+http://127.0.0.1:8000/posts
+[
+   {
+      "pid":1,
+      "title":"dolor",
+      "created_at":"2022-11-13T03:31:29.000000Z",
+      "updated_at":"2022-11-13T03:31:29.000000Z",
+      "tags":[
+         {
+            "tid":1,
+            "name":"Jayda Collins",
+            "created_at":"2022-11-13T03:31:29.000000Z",
+            "updated_at":"2022-11-13T03:31:29.000000Z",
+            "pivot":{
+               "post_id":1,
+               "tag_id":1
+            }
+         },
+         {
+            "tid":2,
+            "name":"Dr. Buddy Beatty",
+            "created_at":"2022-11-13T03:31:29.000000Z",
+            "updated_at":"2022-11-13T03:31:29.000000Z",
+            "pivot":{
+               "post_id":1,
+               "tag_id":2
+            }
+         }
+      ]
+   },
+   {
+      "pid":2,
+      "title":"laudantium",
+      "created_at":"2022-11-13T03:31:29.000000Z",
+      "updated_at":"2022-11-13T03:31:29.000000Z",
+      "tags":[
+         {
+            "tid":3,
+            "name":"Ellie Lubowitz",
+            "created_at":"2022-11-13T03:31:29.000000Z",
+            "updated_at":"2022-11-13T03:31:29.000000Z",
+            "pivot":{
+               "post_id":2,
+               "tag_id":3
+            }
+         },
+         {
+            "tid":4,
+            "name":"Kamren Stracke",
+            "created_at":"2022-11-13T03:31:30.000000Z",
+            "updated_at":"2022-11-13T03:31:30.000000Z",
+            "pivot":{
+               "post_id":2,
+               "tag_id":4
+            }
+         }
+      ]
+   },
+   {
+      "pid":3,
+      "title":"eaque",
+      "created_at":"2022-11-13T03:31:30.000000Z",
+      "updated_at":"2022-11-13T03:31:30.000000Z",
+      "tags":[
+         {
+            "tid":5,
+            "name":"Clint Hessel",
+            "created_at":"2022-11-13T03:31:30.000000Z",
+            "updated_at":"2022-11-13T03:31:30.000000Z",
+            "pivot":{
+               "post_id":3,
+               "tag_id":5
+            }
+         }
+      ]
+   },
+   {
+      "pid":4,
+      "title":"eius",
+      "created_at":"2022-11-13T03:31:30.000000Z",
+      "updated_at":"2022-11-13T03:31:30.000000Z",
+      "tags":[
+         {
+            "tid":5,
+            "name":"Clint Hessel",
+            "created_at":"2022-11-13T03:31:30.000000Z",
+            "updated_at":"2022-11-13T03:31:30.000000Z",
+            "pivot":{
+               "post_id":4,
+               "tag_id":5
+            }
+         }
+      ]
+   },
+   {
+      "pid":5,
+      "title":"ad",
+      "created_at":"2022-11-13T03:31:30.000000Z",
+      "updated_at":"2022-11-13T03:31:30.000000Z",
+      "tags":[
+         {
+            "tid":6,
+            "name":"Prof. Geovanni Ondricka",
+            "created_at":"2022-11-13T03:31:30.000000Z",
+            "updated_at":"2022-11-13T03:31:30.000000Z",
+            "pivot":{
+               "post_id":5,
+               "tag_id":6
+            }
+         }
+      ]
+   },
+   {
+      "pid":6,
+      "title":"nemo",
+      "created_at":"2022-11-13T03:31:31.000000Z",
+      "updated_at":"2022-11-13T03:31:31.000000Z",
+      "tags":[
+         {
+            "tid":6,
+            "name":"Prof. Geovanni Ondricka",
+            "created_at":"2022-11-13T03:31:30.000000Z",
+            "updated_at":"2022-11-13T03:31:30.000000Z",
+            "pivot":{
+               "post_id":6,
+               "tag_id":6
+            }
+         }
+      ]
+   }
+]
+```
 
 
