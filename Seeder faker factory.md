@@ -58,6 +58,11 @@ Route::get('/create', function (Faker $faker) {
 ```
 
 
+---------------------------
+
+# for factory see the newly created projects database/factories folder
+
+
 
 
 
