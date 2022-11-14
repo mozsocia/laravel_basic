@@ -4,11 +4,13 @@ https://www.youtube.com/watch?v=Y8crm7oULds
 
 ```php
 
-use Fake\Factory as Faker
+use Fake\Factory as Faker;
 
-class CustomerSeeder extends Seeder {
-
-  public function run() {
+class DatabaseSeeder extends Seeder
+{
+   
+    public function run()
+    {
       $faker = Faker::create();
 
       $customer = new Customer;
