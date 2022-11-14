@@ -4,7 +4,7 @@
 composer create-project laravel/laravel:8.* your-project-name 
 ```
 ```
-composer require laravel/breeze --dev
+composer require laravel/breeze:1.9.* --dev
 
 php artisan breeze:install
 
