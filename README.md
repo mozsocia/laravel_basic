@@ -37,7 +37,7 @@ insure that you have this dependensies
    ```
    
    
-   copy resource folder 
+   ### copy resource folder 
    
    ```
    npm install
