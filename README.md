@@ -38,11 +38,33 @@ insure that you have this dependensies
    
    
    ### ** *********copy resource folder **
-   
+   <br><br><br>
+   no need to run below code cdn is used
    ```
    npm install
    npm run dev
    ```
    done
 
+
+-------------------------
+========================
+
+Easy way
+
+
+
+```
+composer create-project laravel/laravel:8.* your-project-name 
+```
+```
+composer require laravel/breeze --dev
+
+php artisan breeze:install
+
+```
+
+copy resource folder 
+
+then done
 
