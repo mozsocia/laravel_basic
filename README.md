@@ -17,3 +17,5 @@ https://github.com/skniyajali/Multi-Auth-Using-Laravel-Jetstream
 https://github.com/siddharth018/laravel8multiauth
 
 https://github.com/bossoff/Laravel-JetStream-Multi-Authentication
+
+https://github.com/painlesscode/breeze-multiauth
