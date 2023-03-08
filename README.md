@@ -13,3 +13,7 @@ https://github.com/rubensrocha/laravel-breeze-multi-auth-admin
 https://stackoverflow.com/questions/65514452/laravel-8-multi-auth-with-jetstream-livewire
 
 https://github.com/skniyajali/Multi-Auth-Using-Laravel-Jetstream
+
+https://github.com/siddharth018/laravel8multiauth
+
+https://github.com/bossoff/Laravel-JetStream-Multi-Authentication
