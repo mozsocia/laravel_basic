@@ -52,7 +52,7 @@ class ImageController extends Controller
 }
 
 ```
-
+perfect way to do it
 ```php
       $image = $request->file('image');
       $originalName = $image->getClientOriginalName();
