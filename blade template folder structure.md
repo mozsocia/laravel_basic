@@ -1,0 +1,35 @@
+```
+- app/
+  - Http/
+    - Controllers/
+      - HomeController.php
+  - Providers/
+    - AppServiceProvider.php
+- resources/
+  - views/
+    - back/
+      - auth/
+        - layout.blade.php
+        - login.blade.php
+        - register.blade.php
+        - forgot-password.blade.php
+        - reset-password.blade.php
+        - partials/
+          - auth-header.blade.php
+          - auth-footer.blade.php
+      - dashboard/
+        - layout.blade.php
+        - index.blade.php
+        - profile.blade.php
+        - settings.blade.php
+        - product/
+          - index.blade.php
+          - create.blade.php
+          - show.blade.php
+          - edit.blade.php
+        - partials/
+          - dashboard-header.blade.php
+          - dashboard-footer.blade.php
+- routes/
+  - web.php
+```
