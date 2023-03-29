@@ -43,6 +43,36 @@
 
 ```
 
+```
+#!/bin/bash
+
+# Create the auth directory and its files
+mkdir -p auth/layouts
+mkdir -p auth/partials
+touch auth/layouts/app.blade.php
+touch auth/login.blade.php
+touch auth/register.blade.php
+touch auth/forgot-password.blade.php
+touch auth/reset-password.blade.php
+touch auth/partials/auth-header.blade.php
+touch auth/partials/auth-footer.blade.php
+
+# Create the dashboard directory and its files
+mkdir -p dashboard/layouts
+mkdir -p dashboard/product
+mkdir -p dashboard/partials
+touch dashboard/layouts/app.blade.php
+touch dashboard/index.blade.php
+touch dashboard/profile.blade.php
+touch dashboard/settings.blade.php
+touch dashboard/product/index.blade.php
+touch dashboard/product/create.blade.php
+touch dashboard/product/show.blade.php
+touch dashboard/product/edit.blade.php
+touch dashboard/partials/dashboard-header.blade.php
+touch dashboard/partials/dashboard-footer.blade.php
+```
+
 
 
 ### general way
