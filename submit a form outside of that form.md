@@ -1,4 +1,17 @@
 ```blade
+<td>
+    <a href="{{ route('brands.edit', $brand) }}" class="btn btn-sm btn-warning">Edit</a>
+    <form action="{{ route('brands.destroy', $brand) }}" method="POST" class="d-inline">
+        @csrf
+        @method('DELETE')
+        
+        <button type="submit" class="btn btn-sm btn-danger" 
+        onclick="return confirm('Are you sure you want to delete this brand?')">Delete</button>
+    </form>
+</td>
+```
+
+```blade
   <form id="send-verification" method="post" action="{{ route('verification.send') }}">
               @csrf
   </form>
@@ -27,3 +40,5 @@
     </a>
   </form>
 ```
+
+
