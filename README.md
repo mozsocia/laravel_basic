@@ -1,3 +1,12 @@
+```
+#!/bin/bash
+
+touch index.blade.php
+touch create.blade.php
+touch edit.blade.php
+touch show.blade.php
+```
+
 # laravel_basic
 
 ```
