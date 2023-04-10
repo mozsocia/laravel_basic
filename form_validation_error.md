@@ -35,7 +35,40 @@
   </form>
       
  ```
- 
+ ```blade
+    <form action="{{ route('sub_categories.store') }}" method="POST">
+     @csrf
+    
+     <div class="form-group mb-4">
+       <label for="name">Name</label>
+       <input type="text" name="name" id="name" value="{{ old('name') }}"
+         class="form-control @error('name') is-invalid @enderror">
+       @error('name')
+         <div class="invalid-feedback">{{ $message }}</div>
+       @enderror
+     </div>
+     
+      <div class="form-group mb-4">
+       <label for="category_id">Category</label>
+       <select name="category_id" id="category_id"
+         class="form-control @error('category_id') is-invalid @enderror">
+         <option value="">Select a category</option>
+         @foreach ($categories as $category)
+           <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>
+             {{ $category->name }}</option>
+         @endforeach
+       </select>
+       @error('category_id')
+         <div class="invalid-feedback">{{ $message }}</div>
+       @enderror
+     </div>
+     
+     <div class="form-group mb-4">
+       <button type="submit" class="btn btn-primary">Create Sub-Category</button>
+       <a href="{{ route('sub_categories.index') }}" class="btn btn-secondary">Cancel</a>
+     </div>
+   </form>
+ ```
  ```blade
  
 <form action="{{ route('users.store') }}" method="POST">
