@@ -46,6 +46,8 @@ Step 4: Applying the Policy To apply the policy to a particular action, you can 
 public function update(Request $request, Post $post)
 {
     $this->authorize('update', $post);
+    // or without any object instance
+    $this->authorize('create', Post::class);
 
     // Perform the update action
 }
