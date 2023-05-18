@@ -1,4 +1,29 @@
 ```php
+        // laravel default standerd
+        $validator = Validator::make($request->all(), [
+            'email' => 'required|string|email',
+            'password' => 'required|string',
+        ]);
+    
+        if ($validator->fails()) {
+            return response()->json([
+                'message' => 'The given data was invalid.',
+                'errors' => $validator->errors(),
+            ], 422);
+        }
+
+ 
+        $validatedData = $validator->validated();
+
+
+
+
+
+
+
+
+
+
 use Illuminate\Support\Facades\Validator;
 
 public function register(Request $request)
