@@ -12,7 +12,7 @@
     - AppServiceProvider.php
 - resources/
   - views/
-    - back/
+    - admin/
       - auth/
         - layouts/
           - app.blade.php
@@ -85,7 +85,7 @@ touch dashboard/partials/dashboard-footer.blade.php
     - AppServiceProvider.php
 - resources/
   - views/
-    - back/
+    - admin/
       - auth/
         - layout.blade.php
         - login.blade.php
@@ -140,5 +140,59 @@ touch dashboard/partials/dashboard-header.blade.php
 touch dashboard/partials/dashboard-footer.blade.php
 ```
 
+
+
+```
+project/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   │   ├── Admin/
+│   │   │   │   ├── Auth/
+│   │   │   │   │   ├── AuthController.php
+│   │   │   │   ├── Dashboard/
+│   │   │   │   │   ├── DashboardController.php
+├── resources/
+│   ├── views/
+│   │   ├── admin/
+│   │   │   ├── auth/
+│   │   │   │   ├── login.blade.php
+│   │   │   ├── dashboard/
+│   │   │   │   ├── index.blade.php
+│   │   │   ├── layouts/
+│   │   │   │   ├── auth.blade.php
+│   │   │   │   ├── dashboard.blade.php
+│   │   │   ├── partials/
+│   │   │   │   ├── auth/
+│   │   │   │   │   ├── _navbar.blade.php
+│   │   │   │   ├── dashboard/
+│   │   │   │   │   ├── _sidebar.blade.php
+├── routes/
+│   ├── web.php
+```
+
+```
+#!/bin/bash
+
+# Create directories
+mkdir -p project/app/Http/Controllers/Admin
+mkdir -p project/resources/views/admin/auth
+mkdir -p project/resources/views/admin/dashboard
+mkdir -p project/resources/views/admin/layouts
+mkdir -p project/resources/views/admin/partials/auth
+mkdir -p project/resources/views/admin/partials/dashboard
+
+# Create files
+touch project/app/Http/Controllers/Admin/Auth/AuthController.php
+touch project/app/Http/Controllers/Admin/Dashboard/DashboardController.php
+touch project/resources/views/admin/auth/login.blade.php
+touch project/resources/views/admin/dashboard/index.blade.php
+touch project/resources/views/admin/layouts/auth.blade.php
+touch project/resources/views/admin/layouts/dashboard.blade.php
+touch project/resources/views/admin/partials/auth/_navbar.blade.php
+touch project/resources/views/admin/partials/dashboard/_sidebar.blade.php
+
+echo "Folder and file structure created successfully!"
+```
 
 
