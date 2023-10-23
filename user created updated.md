@@ -1,4 +1,142 @@
+
+Next, create a new macro within the `App\Providers\AppServiceProvider` in the `boot` method. This macro will define the `userstamps` method used in the migration:
+
+```php
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\ServiceProvider;
+
+class AppServiceProvider extends ServiceProvider
+{
+    public function boot()
+    {
+        Blueprint::macro('userstamps', function () {
+            $this->unsignedBigInteger('created_by')->nullable();
+            $this->unsignedBigInteger('updated_by')->nullable();
+            
+            $this->foreign('created_by')->references('id')->on('users');
+            $this->foreign('updated_by')->references('id')->on('users');
+        });
+    }
+}
+
+```
+
+Open the generated migration file and define your custom method for creating `created_by` and `updated_by` columns. For instance, you can create a `userstamps` method:
+
+```php
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class AddCreatedByAndUpdatedByToTable extends Migration
+{
+    public function up()
+    {
+        Schema::table('your_table_name', function (Blueprint $table) {
+            $table->userstamps();
+        });
+    }
+
+    public function down()
+    {
+        Schema::table('your_table_name', function (Blueprint $table) {
+            $table->dropColumn(['created_by', 'updated_by']);
+        });
+    }
+}
+
+```
+
+1.  Create a new trait file, e.g., `UserstampsTrait.php`, in the `app/Traits` directory. If the `Traits` directory doesn't exist, you can create it.
+
+```php
+// app/Traits/UserstampsTrait.php
+
+namespace App\Traits;
+
+trait UserstampsTrait
+{
+    protected static function bootUserstamps()
+    {
+        static::creating(function ($model) {
+            $user = auth()->user();
+            if ($user) {
+                $model->created_by = $user->id;
+                $model->updated_by = $user->id;
+            }
+        });
+
+        static::updating(function ($model) {
+            $user = auth()->user();
+            if ($user) {
+                $model->updated_by = $user->id;
+            }
+        });
+    }
+}
+
+```
+
+
+Create a new base model, `BaseModel.php`, in the `app/Models` directory (or any directory you prefer):
+
+```php
+// app/Models/BaseModel.php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use App\Traits\UserstampsTrait;
+
+class BaseModel extends Model
+{
+    use UserstampsTrait;
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::bootUserstamps();
+    }
+
+    public function createdBy()
+    {
+        return $this->belongsTo(User::class, 'created_by')->select(['id', 'name', 'email']);
+    }
+
+    public function updatedBy()
+    {
+        return $this->belongsTo(User::class, 'updated_by')->select(['id', 'name', 'email']);
+    }
+}
+
+```
+
+
+2.  Now, have your specific models extend the `BaseModel` instead of the default `Model`:
+
+```php
+// app/Models/Product.php
+
+namespace App\Models;
+
+class Product extends BaseModel
+{
+    // Your specific model code here
+}
+
+```
+
+
+----------------------------
+
+<br>
+
+----------------------------
+----------------------------
+
 what is " $table->timestamps();" ??
+
 
 ChatGPT
 
@@ -327,6 +465,16 @@ class BaseModel extends Model
         parent::boot();
 
         static::bootUserstamps();
+    }
+
+    public function createdBy()
+    {
+        return $this->belongsTo(User::class, 'created_by')->select(['id', 'name', 'email']);
+    }
+
+    public function updatedBy()
+    {
+        return $this->belongsTo(User::class, 'updated_by')->select(['id', 'name', 'email']);
     }
 }
 
